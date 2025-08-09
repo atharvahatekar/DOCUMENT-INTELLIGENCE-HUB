@@ -41,7 +41,7 @@ class ConversationalRAG:
                 self._get_session_history,
                 input_messages_key="input",
                 history_messages_key="chat_history",
-                output_messages_key="answer"
+                output_messages_key="answer" 
             )
             self.log.info("Wrapped chain with message history", session_id=session_id)
 
