@@ -4,3 +4,4 @@ document_portal.egg-info
 __pycache__
 *.pyc
 logs/
+faiss_index/
