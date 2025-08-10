@@ -5,3 +5,4 @@ __pycache__
 *.pyc
 logs/
 faiss_index/
+archive/
