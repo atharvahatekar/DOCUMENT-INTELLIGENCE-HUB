@@ -13,4 +13,5 @@ streamlit
 langchain-core[tracing]
 pytest
 docx2txt
+fastapi
 -e .
