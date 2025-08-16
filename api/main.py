@@ -21,7 +21,7 @@ FAISS_BASE = os.getenv("FAISS_BASE", "faiss_index")
 UPLOAD_BASE = os.getenv("UPLOAD_BASE", "data")
 FAISS_INDEX_NAME = os.getenv("FAISS_INDEX_NAME", "index")  # <--- keep consistent with save_local()
 
-app = FastAPI(title="Document Portal API", version="0.1")
+app = FastAPI(title="DOCUMENT-INTELLIGENCE-HUB API", version="0.1")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 app.mount("/static", StaticFiles(directory=str(BASE_DIR / "static")), name="static")
@@ -43,7 +43,7 @@ async def serve_ui(request: Request):
 
 @app.get("/health")
 def health() -> Dict[str, str]:
-    return {"status": "ok", "service": "document-portal"}
+    return {"status": "ok", "service": "DOCUMENT-INTELLIGENCE-HUB"}
 
 # ---------- ANALYZE ----------
 @app.post("/analyze")
@@ -159,5 +159,5 @@ def _read_pdf_via_handler(handler: DocHandler, path: str) -> str:
 
 
 # command for executing the fast api
-# uvicorn api.main:app --reload    
+# uvicorn api.main:app --port 8080 --reload    
 #uvicorn api.main:app --host 0.0.0.0 --port 8080 --reload
